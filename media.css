@@ -208,6 +208,35 @@
   .page3-circle2 {
     display: none;
   }
+  .allproject{
+    height: 70vw;
+    width: 70vw;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 23vh;
+    background-color: #FFA63D;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 10vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    scale: 1;
+    transition: all 0.3s ease 0.3s;
+}
+#para p{
+  font-family: 'silk serif';
+}
+.allproject:hover{
+  scale: 1.2;
+}
+
 
   /* ---------------- Page 4 ---------------- */
   #page4 {
