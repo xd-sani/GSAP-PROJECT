@@ -1,0 +1,647 @@
+@font-face {
+    font-family: "Plane Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: "Plane Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255,255,255);
+    scale: 2;
+    mix-blend-mode: difference;
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #0B0B0B;
+    position: fixed;
+    z-index: 999;
+    padding: 25vh 10vw;
+}
+#line-part1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2vw;
+}
+#line-part1 h5,#line-part1 h6{
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+}
+#line-part1 h5{
+    text-align: right;
+    width: 5vw;
+}
+.line{
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+}
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.line h2{
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes anime {
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: 0.1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: "plain light";
+        -webkit-text-stroke: 0.1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: 'silk serif';
+        -webkit-text-stroke: 0.1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: 'silk serif';
+        -webkit-text-stroke: 0.1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+#main{
+    position: relative;
+    background-color: #151515;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
+#one {
+  position: absolute;
+  top: 13.5%;
+  transform: translateY(-50%);
+  right: 2%;
+  transform: translateX(-3%);
+  font-family: "silk serif";
+  font-size: 3.5vw;
+  font-weight: 100;
+  color: #fff;
+  z-index: 10;
+}
+.hero{
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+}
+.hero:nth-child(2){
+    margin-top: 10vh;
+}
+.hero h1{
+    text-transform: uppercase;
+    font-size: 7vw;
+    line-height: 7vw;
+    position: relative;
+}
+#one{
+    left: 20%;
+}
+.hero h2{
+    text-transform: uppercase;
+    font-size: 7vw;
+    line-height: 7vw;
+    border-bottom: 0.5vw solid #fff;
+    padding-bottom: 0.7vw;
+}
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 15vh;
+    position: relative;
+    margin-bottom: 6vw;
+}
+.video-container img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+}
+.video-container{
+    height: 66vh;
+    width: 71vw;
+    left: 28%;
+    position: relative;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+#video-crsr{
+    background-color: #FFA63D;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+#video-crsr i{
+    font-size: 2vw;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #0B0B0B; */
+    position: relative;
+    padding: 17vh 2vw;
+    margin-bottom: 20vh;
+}
+#page3 h1{
+    text-transform: uppercase;
+    font-size: 6vw;
+    position: relative;
+    margin-left: 28vw;
+}
+#page3 .underline{
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: -12%;
+    top: 12%;
+    font-weight: 100;
+}
+#page3 .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+#image-div-container {
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.image-div {
+    height: 42vw;
+    width: 31vw;
+    position: relative;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 1vw;
+    /* background-color: blue; */
+}
+
+.image-div:nth-child(1) {
+    height: 29vw;
+    width: 21vw;
+}
+
+.image-div img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.page3-circle {
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 23vh;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 10vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.page3-circle svg {
+    height: 30%;
+}
+
+.page3-circle2 {
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    /* margin-top: 23vh; */
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* margin-left: 10vw; */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2vw;
+    margin-right: 3vw;
+}
+
+.page3-circle2 svg {
+    height: 30%;
+    rotate: -45deg;
+}
+
+.circle-in {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* display: ; */
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    scale: 0;
+    border-radius: 50%;
+}
+
+.circle-in p {
+    font-size: 0.95vw;
+    color: #000;
+    font-weight: 500;
+    width: 60%;
+    scale: 0;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    opacity: 0;
+}
+
+.page3-circle:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+.page3-circle2:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle2:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #0B0B0B; */
+    padding-top: 7vh;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+}
+#page4-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+#page4-content h1{
+    text-transform: uppercase;
+    font-size: 6vw;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: -12%;
+    top: 0.6%;
+    font-weight: 100;
+}
+#page4-content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+#page4-content>p{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+#page4flex{
+    display: flex;
+}
+#page4flex img{
+    width: 48%;
+}
+#page4flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+#page4-blue-div{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -30vh;
+    margin-left: 50vh;
+}
+#blue-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2vw 0;
+    border-bottom:2px solid #fff;
+}
+#blue-elem h4{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+#blue-elem p{
+    width: 40%;
+    font-size: 1vw;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: 50vh;
+}
+.elem{
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -2vw;
+}
+.elem h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: animes;
+    animation-duration:12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.elem span{
+    font-family: "silk serif";
+    color: transparent;
+}
+.elem2 span{
+    font-family: "silk serif";
+    color: transparent;
+}
+@keyframes animes {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -2vw;
+}
+.elem2 h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: animes;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+#footer {
+    height: 90vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+    margin-top: 5vw;
+    padding-right: 2vw;
+}
+
+#footer h1 {
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    /* background-color: blue; */
+    position: relative;
+}
+
+#footer-text {
+    position: relative;
+    /* background-color: red; */
+}
+
+#footer-text h2 {
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10%;
+    font-weight: 500;
+
+    left: 0;
+    font-family: "silk serif";
+}
+
+#footer-text h2 span {
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+#footer-text::before {
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -13%;
+    top: 6%;
+}
+
+.underline {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+}
+
+#footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+
+#footer-div h6 {
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+
+.box {
+    width: 20%;
+}
+
+#footer-div h5 {
+    font-size: 1.4vw;
+    font-weight: 500;
+    /* margin: 0.1vh 0; */
+}
+
+#footer > h5 {
+    font-weight: 500;
+    font-size: 1vw;
+}
+._canvas_container{
+    z-index: 9999999 !important;
+    pointer-events: none;
+}
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+}
+#hero3{
+    position: relative;
+    z-index: 9999;
+}
