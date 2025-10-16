@@ -1,4 +1,11 @@
 @media (max-width: 600px) {
+  .mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255,255,255);
+    scale: 2;
+    mix-blend-mode: difference;
+    display: none;
+}
   #page1 {
     height: 60vh;
     width: 100%;
@@ -133,7 +140,6 @@
     position: relative;
     padding: 10vh 3vw 0 3vw;
 
-    /* ✅ Added this line to fix overlap */
     margin-top: 5vh;
 
     margin-bottom: 10vh;
@@ -229,8 +235,8 @@
     position: absolute;
     font-size: 3vw;
     font-family: "silk serif";
-    left: -12%;
-    top: 0.6%;
+    left: 1%;
+    top: -60%;
     font-weight: 100;
   }
 
