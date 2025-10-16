@@ -24,9 +24,9 @@
 html,body{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 body{
-    overflow: hidden;
     overflow-x: hidden;
 }
 .mousefollower{
@@ -111,8 +111,7 @@ body{
 #main{
     position: relative;
     background-color: #151515;
-    overflow: hidden;
-    overflow-x: hidden;
+    z-index: 99;
 }
 #page1{
     height: 100vh;
